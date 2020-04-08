@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple Sprinklr API Authorization Workflow</title>
+    </head>
+    <body>
+        <H1>Simple Sprinklr API Authorization Workflow</H1>
+        </P>
+        This app shows how to generate and process a user authentication process.
+        </P>
+        In the app, the API key and Secret must be set or retrieved from a secure location.
+        </br>
+        The first step is to generate the URL. It passes the API key and callback address on where to send the ticket (code parameter) that can be used to generate the access token.
+        </p>
+        The callback address should set to http://thisdomain.com/auth (or https: if you are using ssl) 
+        </br>
+        The callback address must also be set correctly in the Application Settings at <A href="https://developer.sprinklr.com" target="_new">Sprinklr Developer Portal</A>
+        </P>
+        <a href="auth">Click here</a> to begin the authorization process.
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Authorization Code Processor</title>
+    </head>
+    <body>
+        <H1>Authorization Code Processor</H1>
+        </P>
+        {% if False %}
+        <form name='apiKeyForm' method='POST'>
+            <table>
+                <tr><td align="right">API Key:</td><td><input type="text" name="key" value="{{ key }}"" size=50/></td></tr>
+                <tr><td align="right">App Secret:</td><td><input type="password" name="secret" value="{{ secret }}"" size=100/></td></tr>
+                <tr><td align="right">Environment (blank for Production):</td><td><input type="text" name="path" value="{{ path }}" size=20></td></tr>
+                <tr><td align="right">This form's public URL:</td><td><input type="text" name="url" value="{{ url }}" size=50/> (This should be the same as what was set in the application)</td></tr>
+            </table>
+            <input type="submit" value="Generate Auth Link" class="submitButton"/> 
+        </form>
+        {% endif %}
+
+        </p>
+        {% if link %}
+            <A HREF="{{ link }}" target="_new">Click here to authorize Sprinklr</A>
+        {% endif %}
+        </p>
+
+        </p>
+        <table>
+        {%if code %}   
+            <tr><td align="right">Authorization code:</td><td>{{ code }}</td></tr>
+        {% endif %}
+
+        {%if access_token %}
+            <tr><td align="right">Access Token:</td><td>{{ access_token }}</td></tr>
+        {% endif %}
+
+        {%if refresh_token %}
+            <tr><td align="right">Refresh Token:</td><td>{{ refresh_token }}</td></tr>
+        {% endif %}
+
+        {%if name %}
+            <tr><td align="right">User Name:</td><td>{{ name }}</td></tr>
+        {% endif %}
+
+        {%if email %}
+            <tr><td align="right">User Email Address:</td><td>{{ email }}</td></tr>
+        {% endif %}
+        </table>
+
+        </p>
+        {%if error %}   
+            <strong>Error: {{ error }}</strong>
+        {% endif %}
+    </body>
+</html>
