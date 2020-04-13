@@ -7,24 +7,9 @@
     <body>
         <H1>Authorization Code Processor</H1>
         </P>
-        {% if False %}
-        <form name='apiKeyForm' method='POST'>
-            <table>
-                <tr><td align="right">API Key:</td><td><input type="text" name="key" value="{{ key }}"" size=50/></td></tr>
-                <tr><td align="right">App Secret:</td><td><input type="password" name="secret" value="{{ secret }}"" size=100/></td></tr>
-                <tr><td align="right">Environment (blank for Production):</td><td><input type="text" name="path" value="{{ path }}" size=20></td></tr>
-                <tr><td align="right">This form's public URL:</td><td><input type="text" name="url" value="{{ url }}" size=50/> (This should be the same as what was set in the application)</td></tr>
-            </table>
-            <input type="submit" value="Generate Auth Link" class="submitButton"/> 
-        </form>
-        {% endif %}
-
-        </p>
         {% if link %}
-            <A HREF="{{ link }}" target="_new">Click here to authorize Sprinklr</A>
+            <A HREF="{{ link }}">Click here to authorize Sprinklr</A>
         {% endif %}
-        </p>
-
         </p>
         <table>
         {%if code %}   
